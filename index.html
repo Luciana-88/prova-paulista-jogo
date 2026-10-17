@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1b6bd1">
+  <title>Prova Paulista — Correção | Introdução à Administração</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <section id="startScreen" class="screen start-screen">
+      <div class="start-overlay"></div>
+      <div class="start-card">
+        <div class="badge">2ª SÉRIE • ADMINISTRAÇÃO • 3º BIMESTRE</div>
+        <h1>PROVA PAULISTA<br><span>CORREÇÃO</span></h1>
+        <p class="section-name">Introdução à Administração,<br>Legislação e Pessoas</p>
+        <p class="intro">Responda aos desafios, conquiste moedas e leia o gabarito explicativo após cada resposta.</p>
+        <button id="startBtn" class="pixel-btn primary">▶ INICIAR JOGO</button>
+        <p class="tip">Use o mouse ou toque para escolher a resposta.</p>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <div class="hud">
+        <div class="hud-pill"><span>🏆</span> Pontos: <strong id="score">0</strong></div>
+        <div class="hud-pill"><span>🪙</span> Moedas: <strong id="coins">0</strong></div>
+        <div class="hud-pill"><span>⏱</span> Tempo: <strong id="timer">00:00</strong></div>
+        <div class="hud-pill progress-pill"><span>📍</span> Desafio <strong id="progress">1/8</strong></div>
+      </div>
+
+      <div class="world">
+        <div class="cloud cloud-a"></div>
+        <div class="question-stage">
+          <div class="question-header">
+            <div class="world-title">INTRODUÇÃO À ADMINISTRAÇÃO, LEGISLAÇÃO E PESSOAS</div>
+            <div class="q-type" id="qType">RESPOSTA ÚNICA</div>
+          </div>
+          <div class="question-card">
+            <div class="question-number" id="questionNumber">DESAFIO 1</div>
+            <h2 id="questionTitle"></h2>
+            <div id="questionText" class="question-text"></div>
+            <div id="options" class="options"></div>
+            <button id="submitBtn" class="pixel-btn submit hidden">✓ CONFIRMAR RESPOSTA</button>
+          </div>
+        </div>
+        <div class="mario-zone" aria-hidden="true">
+          <div class="mario-shadow"></div>
+          <div class="mario-dot"></div>
+          <div class="platform"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedbackScreen" class="screen feedback-screen hidden">
+      <div id="feedbackBackdrop" class="feedback-backdrop"></div>
+      <div class="feedback-card">
+        <div id="feedbackIcon" class="feedback-icon">✓</div>
+        <h2 id="feedbackTitle">Parabéns! Você acertou!</h2>
+        <p id="feedbackMessage"></p>
+        <div class="answer-box">
+          <div class="answer-label">GABARITO EXPLICATIVO</div>
+          <div id="explanation"></div>
+        </div>
+        <button id="nextBtn" class="pixel-btn primary">CONTINUAR ▶</button>
+      </div>
+      <div id="coinRain" class="coin-rain" aria-hidden="true"></div>
+    </section>
+
+    <section id="endScreen" class="screen end-screen hidden">
+      <div class="end-card">
+        <div class="trophy">🏆</div>
+        <div class="badge">MISSÃO CONCLUÍDA</div>
+        <h1>FIM DO JOGO!</h1>
+        <p class="section-name">Correção — Introdução à Administração, Legislação e Pessoas</p>
+        <div class="final-stats">
+          <div><span>PONTOS</span><strong id="finalScore">0</strong></div>
+          <div><span>MOEDAS</span><strong id="finalCoins">0</strong></div>
+          <div><span>TEMPO</span><strong id="finalTime">00:00</strong></div>
+        </div>
+        <div id="finalMessage" class="final-message"></div>
+        <button id="restartBtn" class="pixel-btn primary">↻ JOGAR NOVAMENTE</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
+</body>
+</html>
